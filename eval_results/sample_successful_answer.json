@@ -1,0 +1,91 @@
+{
+  "question": "Who created Python and when was it conceived?",
+  "short_answer": "Python was conceived in the late 1980s by Guido van Rossum at CWI.",
+  "key_findings": [
+    "Python was conceived in the late 1980s by Guido van Rossum at CWI."
+  ],
+  "source_links": [
+    "https://docs.python.org/3/tutorial/"
+  ],
+  "verified_findings": [
+    {
+      "claim": {
+        "claim_id": "claim-1",
+        "claim_text": "Python was conceived in the late 1980s by Guido van Rossum at CWI.",
+        "evidence_ids": [
+          "ev-001"
+        ],
+        "verbatim_quotes": [
+          "conceived in the late 1980s by Guido van Rossum at CWI"
+        ],
+        "relevant_entities": [
+          "Python",
+          "Guido van Rossum"
+        ],
+        "relevant_criteria": [],
+        "numeric_assertions": [
+          "1980s"
+        ],
+        "verification_status": "verified",
+        "rejection_reason": null
+      },
+      "supporting_evidence": [
+        {
+          "evidence_id": "ev-001",
+          "url": "https://docs.python.org/3/tutorial/",
+          "domain": "docs.python.org",
+          "title": "Python 3 Documentation",
+          "text": "Python was conceived in the late 1980s by Guido van Rossum at CWI in the Netherlands. Python 3.0 was released in 2008.",
+          "retrieval_timestamp": "2026-10-29T18:06:42.135361Z",
+          "publication_date": null,
+          "provider": "fetch",
+          "retrieval_metadata": {},
+          "relevance_score": null,
+          "authority_score": 0.95,
+          "content_hash": null,
+          "is_quarantined": false,
+          "quarantine_reason": null,
+          "security_flags": [],
+          "trust_level": 1.0
+        }
+      ],
+      "verification_checks_passed": [
+        "evidence_id_existence",
+        "quote_verification",
+        "numeric_consistency",
+        "entity_presence",
+        "negation_check"
+      ],
+      "confidence_contribution": 0.0
+    }
+  ],
+  "rejected_claims": [],
+  "confidence_score": 0.89,
+  "confidence_explanation": "Confidence: 0.89 (heuristic, not calibrated probability). Verification rate: 100% (1/1 claims); Coverage ratio: 100%; Source diversity: 1 unique domain(s); Average authority: 0.95; Verification check rate: 100%; Factual: adequate authority (avg: 0.95)",
+  "assumptions": [],
+  "limitations": [
+    "Confidence scores are heuristic estimates, not calibrated probabilities",
+    "Lexical matching does not prove semantic entailment"
+  ],
+  "suggested_next_steps": [
+    "Verify critical claims against primary sources"
+  ],
+  "execution_status": "completed",
+  "run_metadata": {
+    "run_id": "sample-success-01",
+    "start_time": "2026-10-29T18:06:42.135361Z",
+    "end_time": "2026-10-29T18:06:42.135361Z",
+    "wall_clock_seconds": 0.0,
+    "llm_calls": 0,
+    "tool_calls": 0,
+    "total_input_tokens": null,
+    "total_output_tokens": null,
+    "estimated_cost_usd": null,
+    "search_provider": "unknown",
+    "llm_provider": "mock",
+    "llm_model": "mock-model",
+    "errors": [],
+    "warnings": []
+  },
+  "abstention_reason": null
+}
