@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.cache/
+traces/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+venv/
+.venv/
+.DS_Store
+
+# Keep curated eval outputs and samples; ignore ad-hoc CLI runs.
+eval_results/research_*.json
+eval_results/eval_run_mock_*.json
