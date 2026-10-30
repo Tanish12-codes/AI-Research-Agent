@@ -174,7 +174,7 @@ Full methodology, per-query results and what worked or failed: **[docs/evaluatio
 
 Earlier live runs are kept in `eval_results/` on purpose: run 1 died on Gemini's 20 requests/day quota (which drove the failover design), and run 2 abstained on 3/8 questions (which drove the retry-with-feedback fix).
 
-**Demo video:** [`demo/Research_Desk_Demo.mp4`](demo/Research_Desk_Demo.mp4) (4:46, 1080p, narrated). Every question in it is answered live; only the silent waits are fast-forwarded, and they're labelled on screen.
+**Demo video:** [`demo/Research_Desk_Demo.mp4`](demo/Research_Desk_Demo.mp4) (4:38, 1080p, narrated). Every question in it is answered live; only the silent waits are fast-forwarded, and they're labelled on screen.
 
 ## 8. Configuration
 
