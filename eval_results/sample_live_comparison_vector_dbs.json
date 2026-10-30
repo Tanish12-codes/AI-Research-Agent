@@ -1,0 +1,302 @@
+{
+  "question": "Compare the top 3 open-source vector databases for a startup building RAG products.",
+  "short_answer": "Milvus is a high-performance open-source vector database designed for massive-scale vector data, supporting billions of vectors and advanced features like native hybrid search. Chroma is described as a developer-centric companion that is simple, intuitive, and well-suited for early-stage businesses, prototypes, and LLM-powered applications. Weaviate is an open-source vector database whose parent company raised $50 million in 2023.",
+  "key_findings": [
+    "Milvus is a high-performance open-source vector database designed for massive-scale vector data, supporting billions of vectors and advanced features like native hybrid search.",
+    "Chroma is described as a developer-centric companion that is simple, intuitive, and well-suited for early-stage businesses, prototypes, and LLM-powered applications.",
+    "Weaviate is an open-source vector database whose parent company raised $50 million in 2023."
+  ],
+  "source_links": [
+    "https://zilliz.com/comparison/milvus-vs-qdrant",
+    "https://finance.yahoo.com/news/milvus-surpasses-40-000-github-010000562.html",
+    "https://medium.com/@sepehrnorouzi7/milvus-vs-faiss-vs-qdrant-vs-chroma-a-deep-take-on-four-vector-databases-c2b8c67e9fad",
+    "https://www.shakudo.io/blog/top-9-vector-databases",
+    "https://www.businessinsider.com/seven-vector-database-startups-poised-to-win-ai-revolution-2024-4?op=1"
+  ],
+  "verified_findings": [
+    {
+      "claim": {
+        "claim_id": "claim-1",
+        "claim_text": "Milvus is a high-performance open-source vector database designed for massive-scale vector data, supporting billions of vectors and advanced features like native hybrid search.",
+        "evidence_ids": [
+          "tavily-1bf1dbc4abf5",
+          "tavily-0a9c5274dd27"
+        ],
+        "verbatim_quotes": [
+          "Milvus is an open-source, high-performance, and highly scalable vector database",
+          "Milvus 2.5 introduced native hybrid search, unifying lexical and semantic retrieval in a single engine."
+        ],
+        "relevant_entities": [
+          "Milvus"
+        ],
+        "relevant_criteria": [
+          "Scalability",
+          "Hybrid Search"
+        ],
+        "numeric_assertions": [
+          "46K+ GitHub stars",
+          "10,000+ enterprise teams",
+          "sub-10ms latency"
+        ],
+        "verification_status": "verified",
+        "rejection_reason": null
+      },
+      "supporting_evidence": [
+        {
+          "evidence_id": "tavily-1bf1dbc4abf5",
+          "url": "https://zilliz.com/comparison/milvus-vs-qdrant",
+          "domain": "zilliz.com",
+          "title": "Milvus vs Qdrant: Vector Database Comparison | Zilliz",
+          "text": "Milvus is an open-source, high-performance, and highly scalable vector database that can store, index, and search billion-scale unstructured data through high-dimensional vector embeddings. It is perfect for building modern AI applications such as retrieval augmented generation (RAG), semantic search, multimodal search, and recommendation systems. Milvus runs efficiently across various environments, from laptops to large-scale distributed systems. It is available as open-source software and a [...] This Milvus vs Qdrant comparison is written for engineers and technical teams evaluating vector databases for real-world, production workloads. While Milvus and Qdrant both support basic vector search capability, they differ significantly in areas such as architecture, scalability, performance, reliability, and many other areas. These differences often remain subtle during early experiments but become increasingly important as data volume grows, workloads diversify, and systems move from [...] Milvus is an open-source, high-performance vector database used by 10,000+ enterprise teams worldwide and trusted by a large open-source community with 46K+ GitHub stars. It handles tens of millions to tens of billions of vectors, frequent inserts and deletes, and hybrid search (vector + keyword + metadata + reranking) without disruptive reindexing or fragile tuning. Performance stays predictable as data volume, query patterns, and model embeddings evolve. This is why Milvus is widely deployed",
+          "retrieval_timestamp": "2026-10-30T09:58:08.239719Z",
+          "publication_date": null,
+          "provider": "tavily",
+          "retrieval_metadata": {
+            "score": 0.6058229,
+            "query": "Milvus vs Qdrant vs Chroma performance RAG"
+          },
+          "relevance_score": 0.4629,
+          "authority_score": 0.5,
+          "content_hash": null,
+          "is_quarantined": false,
+          "quarantine_reason": null,
+          "security_flags": [],
+          "trust_level": 1.0
+        },
+        {
+          "evidence_id": "tavily-0a9c5274dd27",
+          "url": "https://finance.yahoo.com/news/milvus-surpasses-40-000-github-010000562.html",
+          "domain": "finance.yahoo.com",
+          "title": "Milvus Surpasses 40,000 GitHub Stars, Reinforcing Leadership in Open-Source Vector Databases",
+          "text": "REDWOOD CITY, Calif., Dec. 18, 2025 /PRNewswire/ -- Zilliz recently announced that Milvus, its open-source vector database, has surpassed 40,000 GitHub stars, marking one of the fastest growth spurts in the project's history. The milestone comes as vector databases rapidly move into production, with more than 10,000 enterprise teams using Milvus in live AI systems\u2014including NVIDIA, Salesforce, eBay, Airbnb, and DoorDash.\n\nzilliz & milvus logo (PRNewsfoto/zilliz) [...] 2025 Milvus Releases Strengthen Enterprise Adoption\n\nIn 2025, Milvus delivered key architectural upgrades that directly improved performance, cost efficiency, and scalability for enterprise production workloads.\n\nMilvus 2.5 introduced native hybrid search, unifying lexical and semantic retrieval in a single engine. This eliminated the operational overhead of maintaining separate search infrastructure, enabling teams to run keyword queries, vector searches, and metadata filters together. [...] About Zilliz\n\nZilliz is the company behind Milvus, the world's most widely adopted open-source vector database. Zilliz Cloud brings that performance to production with a fully managed, cloud-native platform built for scalable, low-latency vector search and hybrid retrieval. It supports billion-scale workloads with sub-10ms latency, auto-scaling, and optimized indexes for GenAI use cases like semantic search and RAG.",
+          "retrieval_timestamp": "2026-10-30T09:58:08.452463Z",
+          "publication_date": null,
+          "provider": "tavily",
+          "retrieval_metadata": {
+            "score": 0.8215175,
+            "query": "top open source vector databases RAG 2024 2025"
+          },
+          "relevance_score": 0.2927,
+          "authority_score": 0.5,
+          "content_hash": null,
+          "is_quarantined": false,
+          "quarantine_reason": null,
+          "security_flags": [],
+          "trust_level": 1.0
+        }
+      ],
+      "verification_checks_passed": [
+        "evidence_id_existence",
+        "quote_verification",
+        "numeric_consistency",
+        "entity_presence",
+        "negation_check"
+      ],
+      "confidence_contribution": 0.0
+    },
+    {
+      "claim": {
+        "claim_id": "claim-3",
+        "claim_text": "Chroma is described as a developer-centric companion that is simple, intuitive, and well-suited for early-stage businesses, prototypes, and LLM-powered applications.",
+        "evidence_ids": [
+          "tavily-ceda4f21898c",
+          "tavily-8bc6d619ee1a"
+        ],
+        "verbatim_quotes": [
+          "Chroma is the developer-centric companion \u2014 simple, intuitive, and great for LLM apps.",
+          "This is a database we\u2019d recommend for early-stage businesses with small-to-medium workloads"
+        ],
+        "relevant_entities": [
+          "Chroma"
+        ],
+        "relevant_criteria": [
+          "Ease of Use",
+          "Prototyping"
+        ],
+        "numeric_assertions": [],
+        "verification_status": "verified",
+        "rejection_reason": null
+      },
+      "supporting_evidence": [
+        {
+          "evidence_id": "tavily-ceda4f21898c",
+          "url": "https://medium.com/@sepehrnorouzi7/milvus-vs-faiss-vs-qdrant-vs-chroma-a-deep-take-on-four-vector-databases-c2b8c67e9fad",
+          "domain": "medium.com",
+          "title": "Milvus vs FAISS vs Qdrant vs Chroma \u2014 A Deep Take on Four Vector Databases",
+          "text": "Milvus is the powerhouse \u2014 perfect for large-scale, mission-critical AI systems.  \n FAISS is the researcher\u2019s toolbox \u2014 ideal when algorithms matter more than infrastructure.  \n Qdrant is the practical production system \u2014 the one you can trust day to day.  \n Chroma is the developer-centric companion \u2014 simple, intuitive, and great for LLM apps. [...] Chroma isn\u2019t designed to replace industrial-strength vector databases. Instead, it shines in the messy, experimental world of LLM-powered apps, where developers need a place to store knowledge, memory, or examples. It makes RAG pipelines, prototypes, and chatbot memory systems feel lightweight and fun rather than infrastructural.\n\n## The Bottom Line \u2014 Four Tools, Four Philosophies\n\nHow we can figure out which one is \u201cbest.\u201d It\u2019s about which philosophy matches your needs. [...] What makes Milvus especially compelling is the attention paid to performance. Most of its search engine is written in C++ and aggressively optimized \u2014 vectorized at the assembly level, tuned for AVX512 and SIMD instructions, able to offload indexing onto GPUs, and built to take advantage of NVMe SSDs. It supports a wide range of indexing approaches \u2014 IVF, HNSW, DiskANN, SCANN, FLAT, and more \u2014 and often reports 2\u20135\u00d7 speed improvements over other vector databases.",
+          "retrieval_timestamp": "2026-10-30T09:58:08.239719Z",
+          "publication_date": null,
+          "provider": "tavily",
+          "retrieval_metadata": {
+            "score": 0.6977124,
+            "query": "Milvus vs Qdrant vs Chroma performance RAG"
+          },
+          "relevance_score": 0.4973,
+          "authority_score": 0.7,
+          "content_hash": null,
+          "is_quarantined": false,
+          "quarantine_reason": null,
+          "security_flags": [],
+          "trust_level": 1.0
+        },
+        {
+          "evidence_id": "tavily-8bc6d619ee1a",
+          "url": "https://www.shakudo.io/blog/top-9-vector-databases",
+          "domain": "www.shakudo.io",
+          "title": "Top 9 Vector Databases as of October 2026 | Shakudo Blog",
+          "text": "Chroma delivers high accuracy with impressive recall rates, supporting embedding-based search and advanced ANN methods. While it offers compact storage, its storage efficiency is less robust for massive datasets compared to dedicated vector databases like Milvus. However, as an open-source option, it offers minimal deployment costs unless scaled heavily. This is a database we\u2019d recommend for early-stage businesses with small-to-medium workloads, particularly for startups who are looking to [...] Milvus is an open-source vector database designed for handling massive-scale vector data. This vector database has excellent performance, with GPU acceleration, distributed querying, and efficient indexing. It is highly configurable and supports a range of indexing methods such as IVF, HNSW, and PQ, allowing users to balance accuracy and speed according to their needs. The database offers excellent scalability with efficient index storage and shard management, ensuring smooth growth as data [...] With a user-friendly, API-first design, it seamlessly integrates with external machine learning models. As an open-source solution, it is cost-effective, making it a top choice for companies looking for large-scale or enterprise-grade deployments.\n\n## 6. MongoDB\n\nView Performance",
+          "retrieval_timestamp": "2026-10-30T09:58:07.683577Z",
+          "publication_date": null,
+          "provider": "tavily",
+          "retrieval_metadata": {
+            "score": 0.8095324,
+            "query": "most popular open source vector DB for startups"
+          },
+          "relevance_score": 0.4189,
+          "authority_score": 0.5,
+          "content_hash": null,
+          "is_quarantined": false,
+          "quarantine_reason": null,
+          "security_flags": [],
+          "trust_level": 1.0
+        }
+      ],
+      "verification_checks_passed": [
+        "evidence_id_existence",
+        "quote_verification",
+        "numeric_consistency",
+        "entity_presence",
+        "negation_check"
+      ],
+      "confidence_contribution": 0.0
+    },
+    {
+      "claim": {
+        "claim_id": "claim-4",
+        "claim_text": "Weaviate is an open-source vector database whose parent company raised $50 million in 2023.",
+        "evidence_ids": [
+          "tavily-a50efa96745c"
+        ],
+        "verbatim_quotes": [
+          "Weaviate's software is completely open-source.",
+          "After Weaviate raised $50 million in 2023"
+        ],
+        "relevant_entities": [
+          "Weaviate"
+        ],
+        "relevant_criteria": [
+          "Funding",
+          "Open Source"
+        ],
+        "numeric_assertions": [
+          "$50 million"
+        ],
+        "verification_status": "verified",
+        "rejection_reason": null
+      },
+      "supporting_evidence": [
+        {
+          "evidence_id": "tavily-a50efa96745c",
+          "url": "https://www.businessinsider.com/seven-vector-database-startups-poised-to-win-ai-revolution-2024-4?op=1",
+          "domain": "www.businessinsider.com",
+          "title": "Seven Vector Database Startups Poised to Win in the AI Revolution - Business Insider",
+          "text": "Year founded: 2017  \nHQ: Redwood City, California  \nTotal VC funding: $113 million  \nNotable investors: Prosperity7, Pavilion Capital\n\nZilliz runs the open-source vector database Milvus and positions itself as one of the \"most popular\" options on the market \u2014 being used by 5,000 enterprises. The Chinese company most recently raised $60 million in Series C funding in August 2022, led by Prosperity7 Ventures, which coincided with the startup's relocation to the Bay Area. [...] Vector database startups fit squarely into that remit \u2014 and some startups in the space have already raised hundreds of millions of dollars from investors. Early leaders include Pinecone, which Tully has backed, as well as Chroma and Qdrant.\n\nBusiness Insider has identified seven key players in the vector database arms race. These startups are organized by the amount of VC funding they have received. [...] After Weaviate raised $50 million in 2023 (a relatively modest sum compared to some on this list), CEO Bob van Luijt told The Information that he met with only three firms before closing the round and was uninterested in eye-popping valuations. Van Luijt, who, before founding Weaviate, spent 13 years at a Dutch nonprofit, also says he's committed to transparency and cooperation. Accordingly, Weaviate's software is completely open-source.",
+          "retrieval_timestamp": "2026-10-30T09:58:07.683577Z",
+          "publication_date": null,
+          "provider": "tavily",
+          "retrieval_metadata": {
+            "score": 0.87807417,
+            "query": "most popular open source vector DB for startups"
+          },
+          "relevance_score": 0.6255,
+          "authority_score": 0.5,
+          "content_hash": null,
+          "is_quarantined": false,
+          "quarantine_reason": null,
+          "security_flags": [],
+          "trust_level": 1.0
+        }
+      ],
+      "verification_checks_passed": [
+        "evidence_id_existence",
+        "quote_verification",
+        "numeric_consistency",
+        "entity_presence",
+        "negation_check"
+      ],
+      "confidence_contribution": 0.0
+    }
+  ],
+  "rejected_claims": [
+    {
+      "claim": {
+        "claim_id": "claim-2",
+        "claim_text": "Qdrant is positioned as a practical production system for vector similarity search and is backed by funding rounds such as its Series A led by Spark Capital.",
+        "evidence_ids": [
+          "tavily-ceda4f21898c",
+          "tavily-05fbad9fa588",
+          "tavily-ba186a11f1ff"
+        ],
+        "verbatim_quotes": [
+          "Qdrant is the practical production system",
+          "Qdrant, the company behind the eponymous open source vector database, has raised $28 million in a Series A round"
+        ],
+        "relevant_entities": [
+          "Qdrant"
+        ],
+        "relevant_criteria": [
+          "Production Readiness"
+        ],
+        "numeric_assertions": [
+          "$28 million"
+        ],
+        "verification_status": "rejected",
+        "rejection_reason": "Quote not found in cited evidence: 'Qdrant, the company behind the eponymous open source vector database, has raised...'; Numeric assertion '$28 million' not supported by cited evidence"
+      },
+      "rejection_reasons": [
+        "Quote not found in cited evidence: 'Qdrant, the company behind the eponymous open source vector database, has raised...'",
+        "Numeric assertion '$28 million' not supported by cited evidence"
+      ],
+      "failed_checks": [
+        "quote_verification",
+        "numeric_consistency"
+      ]
+    }
+  ],
+  "confidence_score": 0.81,
+  "confidence_explanation": "Confidence: 0.81 (heuristic, not calibrated probability). Verification rate: 75% (3/4 claims); Coverage ratio: 75%; Source diversity: 5 unique domain(s); Average authority: 0.54; Verification check rate: 100%; Comparison: all entities covered",
+  "assumptions": [
+    "Open-source refers to Apache 2.0, MIT, or similarly permissive licenses suitable for commercial products.",
+    "RAG applications require efficient similarity search and metadata filtering."
+  ],
+  "limitations": [
+    "Missing coverage for: deployment complexity, RAM and storage footprint",
+    "Evidence coverage: 75%",
+    "1 claim(s) rejected during verification",
+    "Confidence scores are heuristic estimates, not calibrated probabilities",
+    "Lexical matching does not prove semantic entailment"
+  ],
+  "suggested_next_steps": [
+    "Search specifically for: deployment complexity, RAM and storage footprint",
+    "Verify critical claims against primary sources"
+  ],
+  "execution_status": "completed",
+  "run_metadata": {
+    "run_id": "db69d3ff",
+    "start_time": "2026-10-30T09:57:59.506682Z",
+    "end_time": "2026-10-30T09:58:32.618979Z",
+    "wall_clock_seconds": 33.112297,
+    "llm_calls": 2,
+    "tool_calls": 4,
+    "total_input_tokens": 6285,
+    "total_output_tokens": 1463,
+    "estimated_cost_usd": null,
+    "search_provider": "tavily",
+    "llm_provider": "gemini",
+    "llm_model": "gemini-flash-lite-latest",
+    "retries": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "abstention_reason": null
+}
