@@ -1,0 +1,144 @@
+{
+  "question": "Provide verified historical timeline and adoption metrics for Python.",
+  "short_answer": "Python was conceived in the late 1980s by Guido van Rossum.",
+  "key_findings": [
+    "Python was conceived in the late 1980s by Guido van Rossum."
+  ],
+  "source_links": [
+    "https://docs.python.org/3/tutorial/"
+  ],
+  "verified_findings": [
+    {
+      "claim": {
+        "claim_id": "claim-v-1",
+        "claim_text": "Python was conceived in the late 1980s by Guido van Rossum.",
+        "evidence_ids": [
+          "ev-001"
+        ],
+        "verbatim_quotes": [
+          "conceived in the late 1980s by Guido van Rossum"
+        ],
+        "relevant_entities": [
+          "Python"
+        ],
+        "relevant_criteria": [],
+        "numeric_assertions": [],
+        "verification_status": "verified",
+        "rejection_reason": null
+      },
+      "supporting_evidence": [
+        {
+          "evidence_id": "ev-001",
+          "url": "https://docs.python.org/3/tutorial/",
+          "domain": "docs.python.org",
+          "title": "Python 3 Documentation",
+          "text": "Python was conceived in the late 1980s by Guido van Rossum at CWI in the Netherlands. Python 3.0 was released in 2008.",
+          "retrieval_timestamp": "2026-10-29T18:06:42.135361Z",
+          "publication_date": null,
+          "provider": "fetch",
+          "retrieval_metadata": {},
+          "relevance_score": null,
+          "authority_score": 0.95,
+          "content_hash": null,
+          "is_quarantined": false,
+          "quarantine_reason": null,
+          "security_flags": [],
+          "trust_level": 1.0
+        }
+      ],
+      "verification_checks_passed": [
+        "evidence_id_existence",
+        "quote_verification",
+        "numeric_consistency",
+        "entity_presence",
+        "negation_check"
+      ],
+      "confidence_contribution": 0.0
+    }
+  ],
+  "rejected_claims": [
+    {
+      "claim": {
+        "claim_id": "claim-r-2",
+        "claim_text": "Python was not conceived by Guido van Rossum.",
+        "evidence_ids": [
+          "ev-001"
+        ],
+        "verbatim_quotes": [
+          "conceived in the late 1980s by Guido van Rossum"
+        ],
+        "relevant_entities": [],
+        "relevant_criteria": [],
+        "numeric_assertions": [],
+        "verification_status": "rejected",
+        "rejection_reason": "Potential negation flip detected between claim and quote: 'conceived in the late 1980s by Guido van Rossum'"
+      },
+      "rejection_reasons": [
+        "Potential negation flip detected between claim and quote: 'conceived in the late 1980s by Guido van Rossum'"
+      ],
+      "failed_checks": [
+        "negation_check"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "claim-r-1",
+        "claim_text": "Python 3.0 was released in 1995 with 500 million active installations.",
+        "evidence_ids": [
+          "ev-001"
+        ],
+        "verbatim_quotes": [
+          "released in 1995 with 500 million"
+        ],
+        "relevant_entities": [],
+        "relevant_criteria": [],
+        "numeric_assertions": [
+          "500 million",
+          "1995"
+        ],
+        "verification_status": "rejected",
+        "rejection_reason": "Quote not found in cited evidence: 'released in 1995 with 500 million'; Numeric assertion '500 million' not supported by cited evidence"
+      },
+      "rejection_reasons": [
+        "Quote not found in cited evidence: 'released in 1995 with 500 million'",
+        "Numeric assertion '500 million' not supported by cited evidence"
+      ],
+      "failed_checks": [
+        "quote_verification",
+        "numeric_consistency"
+      ]
+    }
+  ],
+  "confidence_score": 0.65,
+  "confidence_explanation": "Confidence: 0.65 (heuristic, not calibrated probability). Verification rate: 33% (1/3 claims); Coverage ratio: 70%; Source diversity: 1 unique domain(s); Average authority: 0.95; Verification check rate: 100%; Factual: adequate authority (avg: 0.95)",
+  "assumptions": [],
+  "limitations": [
+    "Missing coverage for: adoption metrics",
+    "Evidence coverage: 70%",
+    "2 claim(s) rejected during verification",
+    "Confidence scores are heuristic estimates, not calibrated probabilities",
+    "Lexical matching does not prove semantic entailment"
+  ],
+  "suggested_next_steps": [
+    "Search specifically for: adoption metrics",
+    "Verify critical claims against primary sources"
+  ],
+  "execution_status": "completed",
+  "run_metadata": {
+    "run_id": "sample-rejected-03",
+    "start_time": "2026-10-29T18:06:42.135361Z",
+    "end_time": "2026-10-29T18:06:42.138465Z",
+    "wall_clock_seconds": 0.003104,
+    "llm_calls": 0,
+    "tool_calls": 0,
+    "total_input_tokens": null,
+    "total_output_tokens": null,
+    "estimated_cost_usd": null,
+    "search_provider": "unknown",
+    "llm_provider": "mock",
+    "llm_model": "mock-model",
+    "errors": [],
+    "warnings": []
+  },
+  "abstention_reason": null
+}
