@@ -1,5 +1,9 @@
 # Research Agent Architecture & Trust Boundaries
 
+![Architecture](images/architecture.png)
+
+![Provider failover](images/provider-failover.png)
+
 ## 1. System Overview
 
 The **Production-Minded AI Research Agent** is a multi-stage agentic information retrieval, synthesis, and verification system designed to answer open-ended and factual research questions with guaranteed evidence grounding, strict security isolation, and deterministic verification.

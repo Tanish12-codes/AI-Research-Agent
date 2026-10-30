@@ -68,32 +68,9 @@ Real samples from live runs: [`eval_results/`](eval_results/). A full JSONL trac
 
 ## 4. Architecture
 
-```
- question
-    │
-    ▼
- [1] Validate input
- [2] PLANNER LLM ──────────► typed ResearchPlan (steps, queries, entities, success criteria)
-    │                        never sees web content, so injected text can't pick tools
-    ▼
- [3] TOOLS (bounded async, budgeted, retried)
-      search chain: Tavily > Brave > DuckDuckGo > Wikipedia
-      GitHub REST for repos found in results · SSRF-guarded page fetch for thin snippets
-    ▼
- [4] SECURITY BOUNDARY   HTML strip · Unicode normalize · 6 injection pattern families
-                         · strip flagged sentences · quarantine multi-family hits
- [5] FILTER              URL canonicalize · near-duplicate removal · domain authority tiers
- [6] COVERAGE CHECK      missing entities/aspects trigger at most 1 bounded replan
-    ▼
- [7] SYNTHESIZER LLM ────► claims with evidence IDs + verbatim quotes
-    │                      reads web content in delimited blocks, has NO tools
-    ▼
- [8] VERIFIER (code)     evidence ID exists · quote is verbatim in that source
-                         · numbers match · entities present · no negation flip
- [9] CONFIDENCE (code)   from verification rate, coverage, diversity, authority
-    ▼
- FinalAnswer  (or partial / abstained / error, all with the same schema)
-```
+![Architecture: staged pipeline with trust boundaries](docs/images/architecture.png)
+
+![Provider failover: free LLM and search chains](docs/images/provider-failover.png)
 
 Stage code lives in [`src/research_agent/`](src/research_agent/): `planner.py`, `tools/`, `security.py`, `filtering.py`, `synthesizer.py`, `verifier.py`, `confidence.py`, orchestrated by `pipeline.py`. More detail: [docs/architecture.md](docs/architecture.md) · decisions: [docs/decisions.md](docs/decisions.md).
 
@@ -132,6 +109,14 @@ In live runs the verifier regularly catches invented specifics. For example, a c
 - **Pattern-based injection detection.** Fast and explainable, but bypassable by rewording (see limitations).
 
 ## 6. Web UI: the Research Desk
+
+| Answer with confidence scale and footnoted sources | Verified findings with verbatim quotes |
+|---|---|
+| ![Answer view](docs/images/ui-answer.png) | ![Verified findings](docs/images/ui-verified-findings.png) |
+| **Agent vs no-tools baseline** | **Injection bench** |
+| ![Baseline comparison](docs/images/ui-baseline.png) | ![Injection bench](docs/images/ui-injection-bench.png) |
+
+![Execution trace](docs/images/ui-trace.png)
 
 `python server.py` starts a FastAPI server (`/api/research`, `/api/security`, `/api/config`, docs at `/api/docs`) and a hand-written HTML/CSS/JS front end in [`web/`](web/). It has no framework and no build step.
 
