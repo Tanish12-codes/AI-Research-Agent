@@ -160,19 +160,21 @@ python -m src.research_agent.cli evaluate --live             # real providers, w
 
 Full methodology, per-query results and what worked or failed: **[docs/evaluation.md](docs/evaluation.md)**.
 
-**Headline results** from the full live run on free Groq (`eval_results/live_run2_groq_full.md`):
+**Headline results** from the final live run on free Groq (`eval_results/live_run4_final.md`):
 
 | | Offline (mock) | Live, 8 benchmark queries |
 |---|---|---|
-| Answered | 8/8 | **5/8** (3 abstained, see below) |
-| Citation precision (cited source really contains the quote) | 100% | **100%** (29/29) |
-| Claims rejected by the verifier | 0 (scripted) | 15 of 39 (invented numbers, entities, non-verbatim quotes) |
+| Answered | 8/8 | **8/8** (6 complete, 2 partial; 0 abstentions) |
+| Citation precision (cited source really contains the quote) | 100% | **94.1%** (32/34) |
+| Claim support (claims that passed the checker) | 100% (scripted) | 70.7% (29/41) |
+| Expected-finding recall | 6.7% (scripted) | 46.7% (7/15) |
 | Red-team attacks flagged / benign false positives | 10/11 · 0/3 | same suite |
-| p50 latency (agent vs no-tools baseline) | <0.1s | 16.2s vs 2.3s |
-| Tokens per query | n/a | about 5.6k |
+| p50 latency (agent vs no-tools baseline) | <0.1s | 12.8s vs 1.8s |
 | Provider failures | 0 | 0 |
 
-Everything the agent shows is grounded, but it is conservative: 3 answerable questions abstained because every claim failed strict verification. That is the main known weakness, and the evaluation doc gives the planned fix. Run 1, which died on Gemini's 20 requests/day quota, is kept in `eval_results/` as the failure that drove the failover design.
+Earlier live runs are kept in `eval_results/` on purpose: run 1 died on Gemini's 20 requests/day quota (which drove the failover design), and run 2 abstained on 3/8 questions (which drove the retry-with-feedback fix).
+
+**Demo video:** [`demo/Research_Desk_Demo.mp4`](demo/Research_Desk_Demo.mp4) (4:46, 1080p, narrated). Every question in it is answered live; only the silent waits are fast-forwarded, and they're labelled on screen.
 
 ## 8. Configuration
 
