@@ -1,0 +1,175 @@
+# Evaluation Benchmark Queries for AI Research Agent
+# Covers diverse question types, domains, and complexity levels.
+
+version: "1.0"
+description: "Golden benchmark queries for evaluating planning, retrieval, synthesis, and verification."
+
+queries:
+  - id: "q-001"
+    question: "What is Python and who created it?"
+    question_type: "factual"
+    domain: "programming"
+    difficulty: "easy"
+    target_entities:
+      - "Python"
+      - "Guido van Rossum"
+    required_aspects:
+      - "language description"
+      - "creator"
+      - "initial release"
+    expected_findings:
+      - "Python is a high-level, general-purpose programming language"
+      - "Created by Guido van Rossum"
+    success_criteria:
+      - description: "Identify creator of Python"
+        required_entities: ["Guido van Rossum"]
+        required_aspects: ["creator"]
+        measurable: true
+
+  - id: "q-002"
+    question: "Compare FastAPI and Flask for building microservices in Python."
+    question_type: "comparison"
+    domain: "software_engineering"
+    difficulty: "medium"
+    target_entities:
+      - "FastAPI"
+      - "Flask"
+    required_aspects:
+      - "asynchronous performance"
+      - "type hints validation"
+      - "ecosystem maturity"
+    expected_findings:
+      - "FastAPI is built on Starlette and Pydantic with native ASGI support"
+      - "Flask is a synchronous WSGI microframework"
+    success_criteria:
+      - description: "Compare performance and async paradigms"
+        required_entities: ["FastAPI", "Flask"]
+        required_aspects: ["performance", "async"]
+        measurable: true
+
+  - id: "q-003"
+    question: "What are the pros and cons of using GraphQL compared to REST APIs?"
+    question_type: "pros_cons"
+    domain: "web_architecture"
+    difficulty: "medium"
+    target_entities:
+      - "GraphQL"
+      - "REST"
+    required_aspects:
+      - "advantages"
+      - "disadvantages"
+      - "over-fetching"
+      - "caching complexity"
+    expected_findings:
+      - "GraphQL prevents over-fetching and under-fetching by allowing client-specified queries"
+      - "REST has simpler HTTP caching and established tooling"
+    success_criteria:
+      - description: "List at least two distinct pros and cons for both architectures"
+        required_entities: ["GraphQL", "REST"]
+        required_aspects: ["pros", "cons"]
+        measurable: true
+
+  - id: "q-004"
+    question: "How to implement distributed tracing with OpenTelemetry in Python?"
+    question_type: "how_to"
+    domain: "devops"
+    difficulty: "hard"
+    target_entities:
+      - "OpenTelemetry"
+      - "Python"
+    required_aspects:
+      - "tracer provider setup"
+      - "exporter configuration"
+      - "span creation"
+    expected_findings:
+      - "Initialize TracerProvider with a BatchSpanProcessor"
+      - "Configure an exporter such as OTLP or Jaeger"
+    success_criteria:
+      - description: "Provide actionable step-by-step implementation instructions"
+        required_entities: ["OpenTelemetry"]
+        required_aspects: ["configuration", "spans"]
+        measurable: true
+
+  - id: "q-005"
+    question: "What open-source LLM agent frameworks gained significant traction in 2024?"
+    question_type: "discovery"
+    domain: "artificial_intelligence"
+    difficulty: "medium"
+    target_entities:
+      - "LangGraph"
+      - "AutoGPT"
+      - "CrewAI"
+    required_aspects:
+      - "framework names"
+      - "key capabilities"
+      - "architecture style"
+    expected_findings:
+      - "CrewAI and LangGraph became prominent multi-agent orchestration frameworks"
+    success_criteria:
+      - description: "Discover at least 2 relevant open source frameworks"
+        required_entities: []
+        required_aspects: ["frameworks"]
+        measurable: true
+
+  - id: "q-006"
+    question: "How does the Rust borrow checker guarantee memory safety without a garbage collector?"
+    question_type: "exploratory"
+    domain: "systems_programming"
+    difficulty: "hard"
+    target_entities:
+      - "Rust"
+      - "borrow checker"
+    required_aspects:
+      - "ownership rules"
+      - "mutable vs immutable references"
+      - "compile-time lifetimes"
+    expected_findings:
+      - "Enforces single ownership or multiple shared references"
+      - "Prevents data races and dangling pointers at compile time"
+    success_criteria:
+      - description: "Explain ownership and lifetime mechanics"
+        required_entities: ["Rust"]
+        required_aspects: ["ownership", "lifetimes"]
+        measurable: true
+
+  - id: "q-007"
+    question: "What is SQLite WAL mode and what are its concurrency trade-offs?"
+    question_type: "factual"
+    domain: "databases"
+    difficulty: "medium"
+    target_entities:
+      - "SQLite"
+      - "WAL mode"
+    required_aspects:
+      - "write-ahead logging"
+      - "reader-writer concurrency"
+      - "filesystem trade-offs"
+    expected_findings:
+      - "WAL allows concurrent readers while a write occurs"
+      - "Does not work over network filesystems like NFS"
+    success_criteria:
+      - description: "Explain WAL concurrency characteristics"
+        required_entities: ["SQLite"]
+        required_aspects: ["WAL", "concurrency"]
+        measurable: true
+
+  - id: "q-008"
+    question: "Compare PyTorch and JAX for scientific computing and neural network research."
+    question_type: "comparison"
+    domain: "machine_learning"
+    difficulty: "hard"
+    target_entities:
+      - "PyTorch"
+      - "JAX"
+    required_aspects:
+      - "autograd mechanics"
+      - "XLA compilation"
+      - "functional purity"
+    expected_findings:
+      - "PyTorch uses dynamic computational graphs (eager mode)"
+      - "JAX utilizes pure functions and composable transformations via XLA"
+    success_criteria:
+      - description: "Compare computational models and compilation strategies"
+        required_entities: ["PyTorch", "JAX"]
+        required_aspects: ["autograd", "compilation"]
+        measurable: true
