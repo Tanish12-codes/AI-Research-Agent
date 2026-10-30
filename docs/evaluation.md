@@ -88,6 +88,23 @@ Aggregate: claim support 61.5% (24/39), **citation precision 100% (29/29)**, exp
 
 **Reading it honestly:** every answer that was shown was fully grounded (100% citation precision), but the agent is too conservative. 3 answerable questions abstained. In q-005 and q-007 every claim failed the strict verbatim/entity checks; in q-003 the model returned no claims. That is the precision-over-recall tradeoff in practice. The next fixes would be a second synthesis attempt with feedback when all claims are rejected, and an NLI entailment check so faithful paraphrases can pass.
 
+### 3.3c Live run 4: final run after retry-with-feedback and Groq JSON recovery — `eval_results/live_run4_final.md`
+
+| Query | Status | Confidence | Verified / rejected |
+|---|---|---|---|
+| q-001 Python and its creator | partial | 0.88 | 3 / 0 |
+| q-002 FastAPI vs Flask | partial | 0.83 | 7 / 2 |
+| q-003 GraphQL vs REST pros/cons | completed | 0.78 | 4 / 3 |
+| q-004 OpenTelemetry tracing in Python | completed | 0.70 | 2 / 2 |
+| q-005 LLM agent frameworks with traction in 2024 | completed | 0.80 | 3 / 0 |
+| q-006 Rust borrow checker | completed | 0.88 | 3 / 1 |
+| q-007 SQLite WAL trade-offs | completed | 0.75 | 3 / 3 |
+| q-008 PyTorch vs JAX | completed | 0.93 | 4 / 1 |
+
+Aggregate: **8/8 answered** (6 completed, 2 partial when the tool budget ran out), **0 abstentions** (down from 3/8 in run 2), claim support 70.7% (29/41), citation precision 94.1% (32/34), expected-finding recall 46.7% (7/15, up from 26.7%), entity coverage 95.8%, p50 latency 12.8s (baseline 1.8s), **0 provider failures**.
+
+What changed between run 2 and run 4: when the checker strikes nearly every claim, synthesis is retried once with the exact rejection reasons, and Groq's `json_validate_failed` responses are retried with prompt-instructed JSON. Citation precision fell from 100% to 94%: the recovered answers include a few over-citations (an extra source listed beside the one that holds the quote). That is the price of answering instead of abstaining, and it is reported here.
+
 ### 3.4 What worked
 
 - **The verifier catches real hallucinations live.** In every completed live run it rejected claims with invented specifics (funding amounts, star counts, percentages, product versions), not just formatting slips. Those claims are listed with reasons rather than silently dropped.
@@ -110,7 +127,7 @@ Aggregate: claim support 61.5% (24/39), **citation precision 100% (29/29)**, exp
 
 ### 3.6 Known gaps in the evaluation
 
-- **False abstention is 37.5% live.** See section 3.3b; the strict verifier over-rejects. A retry-with-feedback synthesis pass is the first next step.
+- **Two partial answers in the final run.** Broad questions can use up the 20-tool-call budget before coverage is complete; a larger budget trades latency and quota for completeness.
 - **Expected-finding recall is lexical.** An LLM judge calibrated on a few hand-labelled answers would be better.
 - **Baseline comparison.** The no-tools baseline failed on quota in run 1. Single-query comparisons are available in the UI (toggle "Compare with no-tools baseline"). The structural difference holds regardless: the baseline has no sources and no verification.
 - **Red-team suite is pattern-level.** It doesn't include paraphrased or homoglyph attacks, which are known to slip past regex detection (see README limitations).
