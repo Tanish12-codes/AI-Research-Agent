@@ -1,0 +1,36 @@
+{
+  "question": "What was the exact population of the lunar colony in 2021?",
+  "short_answer": "Unable to provide a reliable answer: No verified findings remain after verification. Evidence search yielded no reliable records.",
+  "key_findings": [],
+  "source_links": [],
+  "verified_findings": [],
+  "rejected_claims": [],
+  "confidence_score": 0.0,
+  "confidence_explanation": "Insufficient evidence.",
+  "assumptions": [],
+  "limitations": [
+    "No verified findings remain after verification. Evidence search yielded no reliable records."
+  ],
+  "suggested_next_steps": [
+    "Try rephrasing the question",
+    "Check with additional sources"
+  ],
+  "execution_status": "abstained",
+  "run_metadata": {
+    "run_id": "sample-abstain-02",
+    "start_time": "2026-10-29T18:06:42.135361Z",
+    "end_time": "2026-10-29T18:06:42.137471Z",
+    "wall_clock_seconds": 0.00211,
+    "llm_calls": 0,
+    "tool_calls": 0,
+    "total_input_tokens": null,
+    "total_output_tokens": null,
+    "estimated_cost_usd": null,
+    "search_provider": "unknown",
+    "llm_provider": "mock",
+    "llm_model": "mock-model",
+    "errors": [],
+    "warnings": []
+  },
+  "abstention_reason": "No verified findings remain after verification. Evidence search yielded no reliable records."
+}
